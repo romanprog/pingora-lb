@@ -1,0 +1,17 @@
+[package]
+name = "lab-02-pingora-skeleton"
+description = "Lab 02: Cloudflare Pingora ProxyHttp & LoadBalancer architecture blueprint"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+authors = { workspace = true }
+
+[lints]
+workspace = true
+
+[dependencies]
+lb-core = { workspace = true }
+
+# Uncomment after installing system C/C++ build dependencies (`sudo apt install -y cmake clang libclang-dev pkg-config libssl-dev`):
+# pingora = { workspace = true }
+# async-trait = { workspace = true }

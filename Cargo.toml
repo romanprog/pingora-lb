@@ -1,0 +1,28 @@
+[workspace]
+resolver = "2"
+# Glob patterns automatically include any crate created under crates/ or labs/
+members = [
+    "crates/*",
+    "labs/*",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["arti"]
+
+[workspace.dependencies]
+# Internal workspace crates
+lb-core = { path = "crates/lb-core" }
+
+# Future Pingora dependencies (uncomment in labs/02-pingora-skeleton after installing cmake & clang):
+# pingora = { version = "0.4", features = ["lb"] }
+# async-trait = "0.1"
+# tokio = { version = "1", features = ["full"] }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = "warn"

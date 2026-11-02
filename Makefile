@@ -1,4 +1,4 @@
-.PHONY: help check test lint fmt run-lab01 run-lab02 run-lab03 install-sys-deps
+.PHONY: help check test lint fmt run-lab01 run-lab02 run-lab03 run-lab04 run-lab05 install-sys-deps
 
 CARGO := $(shell which cargo 2>/dev/null || echo "$(HOME)/.cargo/bin/cargo")
 
@@ -25,6 +25,12 @@ run-lab02: ## Run Lab 02: Cloudflare Pingora ProxyHttp blueprint
 
 run-lab03: ## Run Lab 03: Playground
 	$(CARGO) run -p lab-03-playground
+
+run-lab04: ## Run Lab 04: Playground
+	$(CARGO) run -p lab-04-playground
+
+run-lab05: ## Run Lab 05: Playground
+	$(CARGO) run -p lab-05-playground
 
 install-sys-deps: ## Install Linux C/C++ packages needed to compile Pingora (BoringSSL/OpenSSL)
 	sudo apt-get update && sudo apt-get install -y cmake clang libclang-dev pkg-config libssl-dev

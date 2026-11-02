@@ -1,0 +1,12 @@
+[package]
+name = "lab-05-playground"
+description = "Lab 05: Playground"
+version = { workspace = true }
+edition = { workspace = true }
+license = { workspace = true }
+authors = { workspace = true }
+
+[lints]
+workspace = true
+
+[dependencies]
